@@ -15,6 +15,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/test", (req, res) => {
+  res.json({ msg: "You app is running" });
+});
+
 // Mount userRoute
 app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
