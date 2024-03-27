@@ -1,0 +1,120 @@
+
+
+###
+POST http://localhost:4001/api/user/login
+Content-Type: application/json
+
+{
+    "username": "faysal-nassars13",
+    "password": "123"
+}
+
+
+
+###
+GET http://localhost:4001/api/product/allProducts
+Content-Type: application/json
+###
+
+PUT http://localhost:4001/api/product/65e380e52549a5e9892c204e
+Content-Type: application/json
+
+{
+  "title": "Updated Title",
+  "desc": "Updated Description",
+  "newprice": 99.99,
+  "oldprice": 79.99
+}
+
+###
+GET  http://localhost:4001/api/product/allProducts
+Content-Type: application/json
+
+###
+POST http://localhost:4001/api/user/SendMail
+Content-Type: application/json
+
+{
+  "Email": "recipient@example.com"
+}
+###
+
+GET  http://localhost:4001/api/user/feedback
+Content-Type: application/json
+###
+GET http://localhost:4001/api/user/feedback/count
+###
+GET http://localhost:4001/api/user/feedback?dateRange=lastYear
+
+
+###
+POST http://localhost:4001/api/user/signup
+Content-Type: application/json
+
+{
+    "username": "faysal-nassars13",
+    "email": "faysalnassa3rs1@gmail.com",
+    "password": "123"
+}
+
+###
+GET http://localhost:4001/api/cart/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZWY2MDMzNGIzNDc1OGI5OTM0OTU3OCIsImlhdCI6MTcxMDE4NjY3NiwiZXhwIjoxNzEyNzc4Njc2fQ.DCSiUttTD-EniV_VaVkYhK7x_s6S4Y4Fe8TrwJIk2xI
+###
+POST http://localhost:4001/api/cart/addToCart/:65ecf029853ac04006ff6c3f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZWY2MDMzNGIzNDc1OGI5OTM0OTU3OCIsImlhdCI6MTcxMDE4NjY3NiwiZXhwIjoxNzEyNzc4Njc2fQ.DCSiUttTD-EniV_VaVkYhK7x_s6S4Y4Fe8TrwJIk2xI
+
+{
+    "quantity": 2,
+    "size": "xm",
+    "color": "red"
+}
+
+###
+DELETE http://localhost:4001/api/cart/delete/:65ecf029853ac04006ff6c3f
+Authorization: Bearer eyJhbGciOieyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjBjMWExZjA4ZTg1N2M5ODQzNzQ0YyIsImlhdCI6MTcxMDI4NjQ0OCwiZXhwIjoxNzEyODc4NDQ4fQ.m7IM8vyPf5yNIhQERx4VUERJTipAYECUhXZCBi7DqYE
+
+###
+GET http://localhost:4001/api/cart/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjBjMWExZjA4ZTg1N2M5ODQzNzQ0YyIsImlhdCI6MTcxMDc4ODk0NSwiZXhwIjoxNzEzMzgwOTQ1fQ.zUUr0gckevle2TVx1zMZqVQ7XvfBjNLBE47jLRmsKho
+
+###
+POST http://localhost:4001/api/create-order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjBjMWExZjA4ZTg1N2M5ODQzNzQ0YyIsImlhdCI6MTcxMDc4ODk0NSwiZXhwIjoxNzEzMzgwOTQ1fQ.zUUr0gckevle2TVx1zMZqVQ7XvfBjNLBE47jLRmsKho
+
+
+{
+  "subtotal": 100,
+  "total": 85,
+  "phoneNumber": 1234567890,
+  "streetAddress": "123 Main St",
+  "state": "California",
+  "zip": 12345
+}
+
+
+###
+DELETE http://localhost:4001/api/cart/deleteAllFromTheCart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjBjMWExZjA4ZTg1N2M5ODQzNzQ0YyIsImlhdCI6MTcxMDc4ODk0NSwiZXhwIjoxNzEzMzgwOTQ1fQ.zUUr0gckevle2TVx1zMZqVQ7XvfBjNLBE47jLRmsKho
+
+
+###
+GET http://localhost:4001/api/get-orders
+Content-Type: application/json
+###
+GET http://localhost:4001/api/product/topSelling
+Content-Type: application/json
+
+###
+POST http://localhost:4001/api/user/createAdmin
+Content-Type: application/json
+
+{
+  "username": "ibrahim-Admin",
+  "email": "ibrahim@admin.com",
+  "password": "admin123"
+}
